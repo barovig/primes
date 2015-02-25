@@ -19,8 +19,10 @@ namespace FactorList
         static List<long> PrimeCheck(long n)
         {
             List<long> list = new List<long>();
+            List<long> primesList = GetPrimes(n);
+
             int sqrt = (int)Math.Floor(Math.Sqrt((n)));
-            for (long k = 2; k < sqrt; ++k)
+            foreach (var k in primesList)
             {
                 if(n % k == 0)
                 {
@@ -34,6 +36,11 @@ namespace FactorList
             }
 
             return list;
+        }
+
+        static List<long> GetPrimes(long n)
+        {
+            return new List<long>();        // this function will get all prime numbers from 2 to n using sieve
         }
     }
 }
