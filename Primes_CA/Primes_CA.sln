@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeCheck", "Primes_CA\Pri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactorList", "FactorList\FactorList.csproj", "{1701979E-3C78-4454-950C-80CAC1908197}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EuclideanAlgorithm", "EuclideanAlgorithm\EuclideanAlgorithm.csproj", "{B00F4DE0-EFC4-40FD-9AB6-7D2486539FC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendedEuclideanAlgorithm", "ExtendedEuclideanAlgorithm\ExtendedEuclideanAlgorithm.csproj", "{F8C73D50-D5D0-4843-84E7-B166FAB7116D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{1701979E-3C78-4454-950C-80CAC1908197}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1701979E-3C78-4454-950C-80CAC1908197}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1701979E-3C78-4454-950C-80CAC1908197}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B00F4DE0-EFC4-40FD-9AB6-7D2486539FC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B00F4DE0-EFC4-40FD-9AB6-7D2486539FC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B00F4DE0-EFC4-40FD-9AB6-7D2486539FC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B00F4DE0-EFC4-40FD-9AB6-7D2486539FC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8C73D50-D5D0-4843-84E7-B166FAB7116D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8C73D50-D5D0-4843-84E7-B166FAB7116D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8C73D50-D5D0-4843-84E7-B166FAB7116D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8C73D50-D5D0-4843-84E7-B166FAB7116D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
