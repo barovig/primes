@@ -11,7 +11,7 @@ namespace ExtendedEuclideanAlgorithm
         static void Main(string[] args)
         {
 
-           long[] result =  ExtEucAlg(8359,4962);
+           long[] result =  ExtEucAlg(13131717191919,191917171313);
            foreach (var e in result)
                Console.WriteLine(e);
 
