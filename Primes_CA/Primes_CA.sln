@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EuclideanAlgorithm", "Eucli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendedEuclideanAlgorithm", "ExtendedEuclideanAlgorithm\ExtendedEuclideanAlgorithm.csproj", "{F8C73D50-D5D0-4843-84E7-B166FAB7116D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSA_Encrypt", "RSA_Encrypt\RSA_Encrypt.csproj", "{490EC95D-53D3-4FD3-9C90-E6C406098535}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSA_Decrypt", "RSA_Decrypt\RSA_Decrypt.csproj", "{8BBE5CFB-47F2-4FF0-B227-E3368B6D2C21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{F8C73D50-D5D0-4843-84E7-B166FAB7116D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8C73D50-D5D0-4843-84E7-B166FAB7116D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8C73D50-D5D0-4843-84E7-B166FAB7116D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{490EC95D-53D3-4FD3-9C90-E6C406098535}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{490EC95D-53D3-4FD3-9C90-E6C406098535}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{490EC95D-53D3-4FD3-9C90-E6C406098535}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{490EC95D-53D3-4FD3-9C90-E6C406098535}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BBE5CFB-47F2-4FF0-B227-E3368B6D2C21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BBE5CFB-47F2-4FF0-B227-E3368B6D2C21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BBE5CFB-47F2-4FF0-B227-E3368B6D2C21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BBE5CFB-47F2-4FF0-B227-E3368B6D2C21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

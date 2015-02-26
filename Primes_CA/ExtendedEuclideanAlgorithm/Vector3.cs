@@ -12,11 +12,12 @@ namespace ExtendedEuclideanAlgorithm
         // ctor
         public Vector3(long x, long y, long z) { a0 = x; a1 = y; a2 = z; }
         // two operations(* and -) needed for our computations
-            // scalar vector multiply
+        // scalar multiply
         public static Vector3 operator*(long left, Vector3 right)
         {
             return new Vector3(left * right.a0, left * right.a1, left * right.a2);
         }
+        // vector subtract
         public static Vector3 operator-(Vector3 left, Vector3 right)
         {
             return new Vector3(left.a0 - right.a0, left.a1 - right.a1, left.a2 - right.a2);
