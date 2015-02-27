@@ -20,29 +20,27 @@ namespace FactorList
         static List<long> PrimeCheck(long n)
         {
             List<long> list = new List<long>(); 
-            int sqrt = (int)Math.Floor(Math.Sqrt((n)));
+            int sqrt = (int)Math.Floor(Math.Sqrt((n))); // calculate boundary (sqrt)
 
-            List<long> primesList = GetPrimes(sqrt);
+            List<long> primesList = GetPrimes(sqrt);    // get the list of all primes between 2 adnd sqrt(n)
 
-            foreach (var k in primesList)
+            foreach (var k in primesList)               // test each prime
             {
-                if(n % k == 0)
+                if(n % k == 0)                          // if it's a factor
                 {
                     long newN = n;
-                    while (newN % k == 0)
+                    while (newN % k == 0)               // while n can be divided into k
                     {
-                        list.Add(k);
-                        newN /= k;
+                        list.Add(k);                    // add k to list of factors
+                        newN /= k;                      // reduce n by k
                     }
                 }
             }
-
             long checkNum = 1;
-            foreach (var num in list)
-                checkNum *= num;
-            if (checkNum != n)
-                list.Add(n / checkNum);
-
+            foreach (var num in list)       // test each prime factor found
+                checkNum *= num;            // multiply them together
+            if (checkNum != n)              // if product of factors not equal to n, we're missing a single factor that is > sqrt(n)
+                list.Add(n / checkNum);     // find this factor and add to our list
 
             return list;
         }
@@ -54,11 +52,11 @@ namespace FactorList
         /// <returns>List&#60;jlong&#62; of all primes between 2 and n</returns>
         static List<long> GetPrimes(long n)
         {
-            bool[] primes = new bool[n + 1];    // create arrat of bools. if bool at index 'i' is true, then 'i' is prime
+            bool[] primes = new bool[n + 1];    // create array of bools. if bool at index 'i' is true, then 'i' is prime
             for (long i = 2; i <= n; i++) 
                 primes[i] = true;               // initialize them all to true
 
-            for (long i = 2; i <= n; i++)       // start at i = 2, i.e. the first prime.
+            for (long i = 2; i <= n; i++)       // start at i = 2
             {               
                 if (primes[i])                  // if its prime
                 {

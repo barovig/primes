@@ -24,10 +24,13 @@ namespace PrimeCheck
         {
             // calculate square root estimate
             int sqrt = (int)Math.Floor(Math.Sqrt((n)));
-            for (int i = 2; i <= sqrt; ++i)
+            for (int i = 2; i <= sqrt; i+=2)
             {
+
                 if (n % i == 0) // factor found
                     return 0;
+                if (i == 2) // increment i to make it odd on the first iteration
+                    ++i;
             }
             return 1;
         }

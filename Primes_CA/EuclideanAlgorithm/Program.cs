@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,7 +13,6 @@ namespace EuclideanAlgorithm
         {
             long a = 524;
             long b = 223;
-            long d;
             Console.WriteLine(EuclidAlg(a, b));
             Console.ReadKey();
         }
@@ -32,6 +32,7 @@ namespace EuclideanAlgorithm
         }
 
         // little helper func
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void swap(ref long a, ref long b)
         {
             long temp = a;
