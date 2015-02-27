@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ExtendedEuclideanAlgorithm
 {
+    // This class defines a 3-Vector class, its constructor,
+    // two arithmetic operations - scalar multiply and vector subtract and
+    // a helper method which converts object of this class to array long[]
     class Vector3
     {
         public long a0, a1, a2;
