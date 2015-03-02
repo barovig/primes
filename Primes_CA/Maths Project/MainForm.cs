@@ -274,5 +274,41 @@ namespace Maths_Project
 
             q6PlainTxtTbox.Text = message.ToString();
         }
+
+        private void q1CheckMultipleBtn_Click(object sender, EventArgs e)
+        {
+            PrimesDialogForm q1checkMultipleDialog = new PrimesDialogForm();
+            q1checkMultipleDialog.ShowDialog();
+        }
+
+        private void q2FactorizeMultpBtn_Click(object sender, EventArgs e)
+        {
+            PrimesDialogForm q2checkMultipleDialog = new PrimesDialogForm(@"Factorize");
+            q2checkMultipleDialog.ShowDialog();
+        }
+
+        private void q3ComputeMultBtn_Click(object sender, EventArgs e)
+        {
+            EuclideanAlgDialog q3ComputeMultDialog = new EuclideanAlgDialog();
+            q3ComputeMultDialog.ShowDialog();
+        }
+
+        private void q4ComputeMultBtn_Click(object sender, EventArgs e)
+        {
+            EuclideanAlgDialog q4ComputeMultDialog = new EuclideanAlgDialog();
+            q4ComputeMultDialog.ShowDialog();
+        }
+
+        private void q5GenerateKeysBtn_Click(object sender, EventArgs e)
+        {
+            RSADialogForm generateKeysDialog = new RSADialogForm();
+            generateKeysDialog.ShowDialog();
+        }
+
+        private void q6GenerateKeysBtn_Click(object sender, EventArgs e)
+        {
+            RSADialogForm generateKeysDialog = new RSADialogForm();
+            generateKeysDialog.ShowDialog();
+        }
     }
 }

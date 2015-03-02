@@ -38,6 +38,7 @@
             this.q1EntNumLabel = new System.Windows.Forms.Label();
             this.q1Label = new System.Windows.Forms.Label();
             this.Q2Tab = new System.Windows.Forms.TabPage();
+            this.q2FactorListLabel = new System.Windows.Forms.Label();
             this.q2ResultRTbx = new System.Windows.Forms.RichTextBox();
             this.q2FactorizeMultpBtn = new System.Windows.Forms.Button();
             this.q2FactorizeBtn = new System.Windows.Forms.Button();
@@ -54,6 +55,10 @@
             this.q3EnterALabel = new System.Windows.Forms.Label();
             this.q3Label = new System.Windows.Forms.Label();
             this.Q4Tab = new System.Windows.Forms.TabPage();
+            this.q4YOutTbox = new System.Windows.Forms.TextBox();
+            this.q4XOutTbox = new System.Windows.Forms.TextBox();
+            this.q4GcdOutTbox = new System.Windows.Forms.TextBox();
+            this.q4EqtnOutTbox = new System.Windows.Forms.TextBox();
             this.q4ComputeMultBtn = new System.Windows.Forms.Button();
             this.q4Compute = new System.Windows.Forms.Button();
             this.q4CoeffYLabel = new System.Windows.Forms.Label();
@@ -91,11 +96,6 @@
             this.q6Label = new System.Windows.Forms.Label();
             this.HelpTab = new System.Windows.Forms.TabPage();
             this.helpLabel = new System.Windows.Forms.Label();
-            this.q2FactorListLabel = new System.Windows.Forms.Label();
-            this.q4EqtnOutTbox = new System.Windows.Forms.TextBox();
-            this.q4GcdOutTbox = new System.Windows.Forms.TextBox();
-            this.q4XOutTbox = new System.Windows.Forms.TextBox();
-            this.q4YOutTbox = new System.Windows.Forms.TextBox();
             this.MenuTabControl.SuspendLayout();
             this.Q1Tab.SuspendLayout();
             this.Q2Tab.SuspendLayout();
@@ -158,6 +158,7 @@
             this.q1CheckMultipleBtn.TabIndex = 4;
             this.q1CheckMultipleBtn.Text = "Check Multiple..";
             this.q1CheckMultipleBtn.UseVisualStyleBackColor = true;
+            this.q1CheckMultipleBtn.Click += new System.EventHandler(this.q1CheckMultipleBtn_Click);
             // 
             // q1CheckPrimeBtn
             // 
@@ -217,6 +218,16 @@
             this.Q2Tab.Text = "Q II";
             this.Q2Tab.UseVisualStyleBackColor = true;
             // 
+            // q2FactorListLabel
+            // 
+            this.q2FactorListLabel.AutoSize = true;
+            this.q2FactorListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.q2FactorListLabel.Location = new System.Drawing.Point(40, 98);
+            this.q2FactorListLabel.Name = "q2FactorListLabel";
+            this.q2FactorListLabel.Size = new System.Drawing.Size(78, 17);
+            this.q2FactorListLabel.TabIndex = 10;
+            this.q2FactorListLabel.Text = "Factor List:";
+            // 
             // q2ResultRTbx
             // 
             this.q2ResultRTbx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -236,6 +247,7 @@
             this.q2FactorizeMultpBtn.TabIndex = 8;
             this.q2FactorizeMultpBtn.Text = "Factorize Multiple..";
             this.q2FactorizeMultpBtn.UseVisualStyleBackColor = true;
+            this.q2FactorizeMultpBtn.Click += new System.EventHandler(this.q2FactorizeMultpBtn_Click);
             // 
             // q2FactorizeBtn
             // 
@@ -302,6 +314,7 @@
             this.q3ComputeMultBtn.TabIndex = 14;
             this.q3ComputeMultBtn.Text = "Compute Multiple..";
             this.q3ComputeMultBtn.UseVisualStyleBackColor = true;
+            this.q3ComputeMultBtn.Click += new System.EventHandler(this.q3ComputeMultBtn_Click);
             // 
             // q3CalcGcdBtn
             // 
@@ -317,9 +330,9 @@
             // 
             this.q3GcdOutLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.q3GcdOutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.q3GcdOutLabel.Location = new System.Drawing.Point(-3, 117);
+            this.q3GcdOutLabel.Location = new System.Drawing.Point(0, 117);
             this.q3GcdOutLabel.Name = "q3GcdOutLabel";
-            this.q3GcdOutLabel.Size = new System.Drawing.Size(490, 23);
+            this.q3GcdOutLabel.Size = new System.Drawing.Size(483, 23);
             this.q3GcdOutLabel.TabIndex = 7;
             this.q3GcdOutLabel.Text = "Enter numbers a and b to find Gretest Common Divisor";
             this.q3GcdOutLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -354,7 +367,7 @@
             // 
             this.q3EnterALabel.AutoSize = true;
             this.q3EnterALabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.q3EnterALabel.Location = new System.Drawing.Point(22, 44);
+            this.q3EnterALabel.Location = new System.Drawing.Point(23, 44);
             this.q3EnterALabel.Name = "q3EnterALabel";
             this.q3EnterALabel.Size = new System.Drawing.Size(58, 17);
             this.q3EnterALabel.TabIndex = 1;
@@ -395,6 +408,43 @@
             this.Q4Tab.Text = "Q IV";
             this.Q4Tab.UseVisualStyleBackColor = true;
             // 
+            // q4YOutTbox
+            // 
+            this.q4YOutTbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.q4YOutTbox.Location = new System.Drawing.Point(338, 144);
+            this.q4YOutTbox.Name = "q4YOutTbox";
+            this.q4YOutTbox.ReadOnly = true;
+            this.q4YOutTbox.Size = new System.Drawing.Size(116, 23);
+            this.q4YOutTbox.TabIndex = 19;
+            // 
+            // q4XOutTbox
+            // 
+            this.q4XOutTbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.q4XOutTbox.Location = new System.Drawing.Point(338, 115);
+            this.q4XOutTbox.Name = "q4XOutTbox";
+            this.q4XOutTbox.ReadOnly = true;
+            this.q4XOutTbox.Size = new System.Drawing.Size(116, 23);
+            this.q4XOutTbox.TabIndex = 18;
+            // 
+            // q4GcdOutTbox
+            // 
+            this.q4GcdOutTbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.q4GcdOutTbox.Location = new System.Drawing.Point(338, 86);
+            this.q4GcdOutTbox.Name = "q4GcdOutTbox";
+            this.q4GcdOutTbox.ReadOnly = true;
+            this.q4GcdOutTbox.Size = new System.Drawing.Size(116, 23);
+            this.q4GcdOutTbox.TabIndex = 17;
+            // 
+            // q4EqtnOutTbox
+            // 
+            this.q4EqtnOutTbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.q4EqtnOutTbox.Location = new System.Drawing.Point(26, 115);
+            this.q4EqtnOutTbox.Name = "q4EqtnOutTbox";
+            this.q4EqtnOutTbox.ReadOnly = true;
+            this.q4EqtnOutTbox.Size = new System.Drawing.Size(233, 23);
+            this.q4EqtnOutTbox.TabIndex = 16;
+            this.q4EqtnOutTbox.Text = "d = x * a + y * b";
+            // 
             // q4ComputeMultBtn
             // 
             this.q4ComputeMultBtn.Location = new System.Drawing.Point(351, 206);
@@ -403,6 +453,7 @@
             this.q4ComputeMultBtn.TabIndex = 15;
             this.q4ComputeMultBtn.Text = "Compute Multiple..";
             this.q4ComputeMultBtn.UseVisualStyleBackColor = true;
+            this.q4ComputeMultBtn.Click += new System.EventHandler(this.q4ComputeMultBtn_Click);
             // 
             // q4Compute
             // 
@@ -448,7 +499,7 @@
             // 
             this.q4EqtnStaticLabel.AutoSize = true;
             this.q4EqtnStaticLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.q4EqtnStaticLabel.Location = new System.Drawing.Point(23, 89);
+            this.q4EqtnStaticLabel.Location = new System.Drawing.Point(23, 92);
             this.q4EqtnStaticLabel.Name = "q4EqtnStaticLabel";
             this.q4EqtnStaticLabel.Size = new System.Drawing.Size(68, 17);
             this.q4EqtnStaticLabel.TabIndex = 6;
@@ -484,7 +535,7 @@
             // 
             this.q4EnterALabel.AutoSize = true;
             this.q4EnterALabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.q4EnterALabel.Location = new System.Drawing.Point(22, 44);
+            this.q4EnterALabel.Location = new System.Drawing.Point(23, 44);
             this.q4EnterALabel.Name = "q4EnterALabel";
             this.q4EnterALabel.Size = new System.Drawing.Size(58, 17);
             this.q4EnterALabel.TabIndex = 2;
@@ -528,6 +579,7 @@
             this.q5GenerateKeysBtn.TabIndex = 16;
             this.q5GenerateKeysBtn.Text = "Generate Keys";
             this.q5GenerateKeysBtn.UseVisualStyleBackColor = true;
+            this.q5GenerateKeysBtn.Click += new System.EventHandler(this.q5GenerateKeysBtn_Click);
             // 
             // q5EncryptBtn
             // 
@@ -646,6 +698,7 @@
             this.q6GenerateKeysBtn.TabIndex = 17;
             this.q6GenerateKeysBtn.Text = "Generate Keys";
             this.q6GenerateKeysBtn.UseVisualStyleBackColor = true;
+            this.q6GenerateKeysBtn.Click += new System.EventHandler(this.q6GenerateKeysBtn_Click);
             // 
             // q6DecryptBtn
             // 
@@ -741,7 +794,7 @@
             this.HelpTab.Controls.Add(this.helpLabel);
             this.HelpTab.Location = new System.Drawing.Point(4, 25);
             this.HelpTab.Name = "HelpTab";
-            this.HelpTab.Size = new System.Drawing.Size(512, 270);
+            this.HelpTab.Size = new System.Drawing.Size(483, 270);
             this.HelpTab.TabIndex = 6;
             this.HelpTab.Text = "Help";
             this.HelpTab.UseVisualStyleBackColor = true;
@@ -756,53 +809,6 @@
             this.helpLabel.TabIndex = 0;
             this.helpLabel.Text = "Help Page";
             // 
-            // q2FactorListLabel
-            // 
-            this.q2FactorListLabel.AutoSize = true;
-            this.q2FactorListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.q2FactorListLabel.Location = new System.Drawing.Point(40, 98);
-            this.q2FactorListLabel.Name = "q2FactorListLabel";
-            this.q2FactorListLabel.Size = new System.Drawing.Size(78, 17);
-            this.q2FactorListLabel.TabIndex = 10;
-            this.q2FactorListLabel.Text = "Factor List:";
-            // 
-            // q4EqtnOutTbox
-            // 
-            this.q4EqtnOutTbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.q4EqtnOutTbox.Location = new System.Drawing.Point(25, 115);
-            this.q4EqtnOutTbox.Name = "q4EqtnOutTbox";
-            this.q4EqtnOutTbox.ReadOnly = true;
-            this.q4EqtnOutTbox.Size = new System.Drawing.Size(233, 23);
-            this.q4EqtnOutTbox.TabIndex = 16;
-            this.q4EqtnOutTbox.Text = "d = x * a + y * b";
-            // 
-            // q4GcdOutTbox
-            // 
-            this.q4GcdOutTbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.q4GcdOutTbox.Location = new System.Drawing.Point(338, 86);
-            this.q4GcdOutTbox.Name = "q4GcdOutTbox";
-            this.q4GcdOutTbox.ReadOnly = true;
-            this.q4GcdOutTbox.Size = new System.Drawing.Size(116, 23);
-            this.q4GcdOutTbox.TabIndex = 17;
-            // 
-            // q4XOutTbox
-            // 
-            this.q4XOutTbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.q4XOutTbox.Location = new System.Drawing.Point(338, 115);
-            this.q4XOutTbox.Name = "q4XOutTbox";
-            this.q4XOutTbox.ReadOnly = true;
-            this.q4XOutTbox.Size = new System.Drawing.Size(116, 23);
-            this.q4XOutTbox.TabIndex = 18;
-            // 
-            // q4YOutTbox
-            // 
-            this.q4YOutTbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.q4YOutTbox.Location = new System.Drawing.Point(338, 144);
-            this.q4YOutTbox.Name = "q4YOutTbox";
-            this.q4YOutTbox.ReadOnly = true;
-            this.q4YOutTbox.Size = new System.Drawing.Size(116, 23);
-            this.q4YOutTbox.TabIndex = 19;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -811,6 +817,7 @@
             this.Controls.Add(this.MenuTabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Maths Project - K00191419";
             this.MenuTabControl.ResumeLayout(false);
