@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RSADialogForm));
             this.EnterPLabel = new System.Windows.Forms.Label();
             this.EnterQLabel = new System.Windows.Forms.Label();
             this.EnterELabel = new System.Windows.Forms.Label();
@@ -42,6 +43,7 @@
             this.OutputDTbox = new System.Windows.Forms.TextBox();
             this.RSAGenerateBtn = new System.Windows.Forms.Button();
             this.RSACancelBtn = new System.Windows.Forms.Button();
+            this.GenerateEBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // EnterPLabel
@@ -74,11 +76,11 @@
             // OutputNLabel
             // 
             this.OutputNLabel.AutoSize = true;
-            this.OutputNLabel.Location = new System.Drawing.Point(3, 136);
+            this.OutputNLabel.Location = new System.Drawing.Point(3, 117);
             this.OutputNLabel.Name = "OutputNLabel";
-            this.OutputNLabel.Size = new System.Drawing.Size(37, 13);
+            this.OutputNLabel.Size = new System.Drawing.Size(104, 13);
             this.OutputNLabel.TabIndex = 3;
-            this.OutputNLabel.Text = "n(p,q):";
+            this.OutputNLabel.Text = "RSA modulus n(p,q):";
             // 
             // OutputPhiLabel
             // 
@@ -111,6 +113,7 @@
             this.EnterQTbox.Name = "EnterQTbox";
             this.EnterQTbox.Size = new System.Drawing.Size(215, 20);
             this.EnterQTbox.TabIndex = 7;
+            this.EnterQTbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EnterQTbox_KeyDown);
             // 
             // EnterETbox
             // 
@@ -118,6 +121,7 @@
             this.EnterETbox.Name = "EnterETbox";
             this.EnterETbox.Size = new System.Drawing.Size(137, 20);
             this.EnterETbox.TabIndex = 8;
+            this.EnterETbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EnterETbox_KeyDown);
             // 
             // OutputNTbox
             // 
@@ -151,6 +155,7 @@
             this.RSAGenerateBtn.TabIndex = 12;
             this.RSAGenerateBtn.Text = "Generate";
             this.RSAGenerateBtn.UseVisualStyleBackColor = true;
+            this.RSAGenerateBtn.Click += new System.EventHandler(this.RSAGenerateBtn_Click);
             // 
             // RSACancelBtn
             // 
@@ -158,9 +163,19 @@
             this.RSACancelBtn.Name = "RSACancelBtn";
             this.RSACancelBtn.Size = new System.Drawing.Size(75, 23);
             this.RSACancelBtn.TabIndex = 13;
-            this.RSACancelBtn.Text = "Cancel";
+            this.RSACancelBtn.Text = "OK";
             this.RSACancelBtn.UseVisualStyleBackColor = true;
             this.RSACancelBtn.Click += new System.EventHandler(this.RSACancelBtn_Click);
+            // 
+            // GenerateEBtn
+            // 
+            this.GenerateEBtn.Location = new System.Drawing.Point(131, 94);
+            this.GenerateEBtn.Name = "GenerateEBtn";
+            this.GenerateEBtn.Size = new System.Drawing.Size(70, 23);
+            this.GenerateEBtn.TabIndex = 14;
+            this.GenerateEBtn.Text = "Generate e";
+            this.GenerateEBtn.UseVisualStyleBackColor = true;
+            this.GenerateEBtn.Click += new System.EventHandler(this.GenerateEBtn_Click);
             // 
             // RSADialogForm
             // 
@@ -168,6 +183,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(286, 271);
             this.ControlBox = false;
+            this.Controls.Add(this.GenerateEBtn);
             this.Controls.Add(this.RSACancelBtn);
             this.Controls.Add(this.RSAGenerateBtn);
             this.Controls.Add(this.OutputDTbox);
@@ -183,8 +199,8 @@
             this.Controls.Add(this.EnterQLabel);
             this.Controls.Add(this.EnterPLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RSADialogForm";
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Generate RSA keys";
             this.ResumeLayout(false);
@@ -208,5 +224,6 @@
         private System.Windows.Forms.TextBox OutputDTbox;
         private System.Windows.Forms.Button RSAGenerateBtn;
         private System.Windows.Forms.Button RSACancelBtn;
+        private System.Windows.Forms.Button GenerateEBtn;
     }
 }

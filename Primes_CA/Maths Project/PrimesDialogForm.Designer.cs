@@ -50,6 +50,8 @@
             this.q1InsertNumsTbox.Name = "q1InsertNumsTbox";
             this.q1InsertNumsTbox.Size = new System.Drawing.Size(257, 20);
             this.q1InsertNumsTbox.TabIndex = 1;
+            this.q1InsertNumsTbox.Text = "30 31 487 8893 987654323 131317171919";
+            this.q1InsertNumsTbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.q1InsertNumsTbox_KeyDown);
             // 
             // q1CheckNumsBtn
             // 
@@ -59,6 +61,7 @@
             this.q1CheckNumsBtn.TabIndex = 2;
             this.q1CheckNumsBtn.Text = "Check Numbers";
             this.q1CheckNumsBtn.UseVisualStyleBackColor = true;
+            this.q1CheckNumsBtn.Click += new System.EventHandler(this.q1CheckNumsBtn_Click);
             // 
             // q1CloseDialogBtn
             // 

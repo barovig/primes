@@ -35,7 +35,8 @@
             this.AddNumsBtn = new System.Windows.Forms.Button();
             this.ComputeAllBtn = new System.Windows.Forms.Button();
             this.EuclidDialogCancelBtn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.AddedNumsTbox = new System.Windows.Forms.RichTextBox();
+            this.EuclidDialogClearAllBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // EnterALabel
@@ -62,6 +63,7 @@
             this.EntryATbox.Name = "EntryATbox";
             this.EntryATbox.Size = new System.Drawing.Size(100, 20);
             this.EntryATbox.TabIndex = 2;
+            this.EntryATbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EntryATbox_KeyDown);
             // 
             // EntryBTbox
             // 
@@ -69,15 +71,17 @@
             this.EntryBTbox.Name = "EntryBTbox";
             this.EntryBTbox.Size = new System.Drawing.Size(100, 20);
             this.EntryBTbox.TabIndex = 3;
+            this.EntryBTbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EntryBTbox_KeyDown);
             // 
             // AddNumsBtn
             // 
-            this.AddNumsBtn.Location = new System.Drawing.Point(201, 45);
+            this.AddNumsBtn.Location = new System.Drawing.Point(201, 16);
             this.AddNumsBtn.Name = "AddNumsBtn";
             this.AddNumsBtn.Size = new System.Drawing.Size(55, 23);
             this.AddNumsBtn.TabIndex = 4;
             this.AddNumsBtn.Text = "Add";
             this.AddNumsBtn.UseVisualStyleBackColor = true;
+            this.AddNumsBtn.Click += new System.EventHandler(this.AddNumsBtn_Click);
             // 
             // ComputeAllBtn
             // 
@@ -87,6 +91,7 @@
             this.ComputeAllBtn.TabIndex = 5;
             this.ComputeAllBtn.Text = "Compute";
             this.ComputeAllBtn.UseVisualStyleBackColor = true;
+            this.ComputeAllBtn.Click += new System.EventHandler(this.ComputeAllBtn_Click);
             // 
             // EuclidDialogCancelBtn
             // 
@@ -98,15 +103,25 @@
             this.EuclidDialogCancelBtn.UseVisualStyleBackColor = true;
             this.EuclidDialogCancelBtn.Click += new System.EventHandler(this.EuclidDialogCancelBtn_Click);
             // 
-            // textBox1
+            // AddedNumsTbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(29, 94);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(226, 74);
-            this.textBox1.TabIndex = 7;
+            this.AddedNumsTbox.Location = new System.Drawing.Point(24, 84);
+            this.AddedNumsTbox.Name = "AddedNumsTbox";
+            this.AddedNumsTbox.ReadOnly = true;
+            this.AddedNumsTbox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
+            this.AddedNumsTbox.Size = new System.Drawing.Size(232, 78);
+            this.AddedNumsTbox.TabIndex = 7;
+            this.AddedNumsTbox.Text = "";
+            // 
+            // EuclidDialogClearAllBtn
+            // 
+            this.EuclidDialogClearAllBtn.Location = new System.Drawing.Point(201, 46);
+            this.EuclidDialogClearAllBtn.Name = "EuclidDialogClearAllBtn";
+            this.EuclidDialogClearAllBtn.Size = new System.Drawing.Size(55, 23);
+            this.EuclidDialogClearAllBtn.TabIndex = 8;
+            this.EuclidDialogClearAllBtn.Text = "Clear All";
+            this.EuclidDialogClearAllBtn.UseVisualStyleBackColor = true;
+            this.EuclidDialogClearAllBtn.Click += new System.EventHandler(this.EuclidDialogClearAllBtn_Click);
             // 
             // EuclideanAlgDialog
             // 
@@ -114,7 +129,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(273, 213);
             this.ControlBox = false;
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.EuclidDialogClearAllBtn);
+            this.Controls.Add(this.AddedNumsTbox);
             this.Controls.Add(this.EuclidDialogCancelBtn);
             this.Controls.Add(this.ComputeAllBtn);
             this.Controls.Add(this.AddNumsBtn);
@@ -127,6 +143,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Compute Multiple Divisors";
+            this.Shown += new System.EventHandler(this.EuclideanAlgDialog_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,6 +158,7 @@
         private System.Windows.Forms.Button AddNumsBtn;
         private System.Windows.Forms.Button ComputeAllBtn;
         private System.Windows.Forms.Button EuclidDialogCancelBtn;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RichTextBox AddedNumsTbox;
+        private System.Windows.Forms.Button EuclidDialogClearAllBtn;
     }
 }

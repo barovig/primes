@@ -95,6 +95,8 @@
             this.q6CypherLabel = new System.Windows.Forms.Label();
             this.q6Label = new System.Windows.Forms.Label();
             this.HelpTab = new System.Windows.Forms.TabPage();
+            this.HelpGenerateReportBtn = new System.Windows.Forms.Button();
+            this.helpTbox = new System.Windows.Forms.RichTextBox();
             this.helpLabel = new System.Windows.Forms.Label();
             this.MenuTabControl.SuspendLayout();
             this.Q1Tab.SuspendLayout();
@@ -121,7 +123,7 @@
             this.MenuTabControl.Location = new System.Drawing.Point(0, 0);
             this.MenuTabControl.Name = "MenuTabControl";
             this.MenuTabControl.SelectedIndex = 0;
-            this.MenuTabControl.Size = new System.Drawing.Size(491, 299);
+            this.MenuTabControl.Size = new System.Drawing.Size(491, 278);
             this.MenuTabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.MenuTabControl.TabIndex = 0;
             // 
@@ -136,7 +138,7 @@
             this.Q1Tab.Location = new System.Drawing.Point(4, 25);
             this.Q1Tab.Name = "Q1Tab";
             this.Q1Tab.Padding = new System.Windows.Forms.Padding(3);
-            this.Q1Tab.Size = new System.Drawing.Size(483, 270);
+            this.Q1Tab.Size = new System.Drawing.Size(483, 249);
             this.Q1Tab.TabIndex = 0;
             this.Q1Tab.Text = "Q I";
             this.Q1Tab.UseVisualStyleBackColor = true;
@@ -213,7 +215,7 @@
             this.Q2Tab.Location = new System.Drawing.Point(4, 25);
             this.Q2Tab.Name = "Q2Tab";
             this.Q2Tab.Padding = new System.Windows.Forms.Padding(3);
-            this.Q2Tab.Size = new System.Drawing.Size(483, 270);
+            this.Q2Tab.Size = new System.Drawing.Size(483, 249);
             this.Q2Tab.TabIndex = 1;
             this.Q2Tab.Text = "Q II";
             this.Q2Tab.UseVisualStyleBackColor = true;
@@ -301,7 +303,7 @@
             this.Q3Tab.Controls.Add(this.q3Label);
             this.Q3Tab.Location = new System.Drawing.Point(4, 25);
             this.Q3Tab.Name = "Q3Tab";
-            this.Q3Tab.Size = new System.Drawing.Size(483, 270);
+            this.Q3Tab.Size = new System.Drawing.Size(483, 249);
             this.Q3Tab.TabIndex = 2;
             this.Q3Tab.Text = "Q III";
             this.Q3Tab.UseVisualStyleBackColor = true;
@@ -330,7 +332,7 @@
             // 
             this.q3GcdOutLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.q3GcdOutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.q3GcdOutLabel.Location = new System.Drawing.Point(0, 117);
+            this.q3GcdOutLabel.Location = new System.Drawing.Point(0, 106);
             this.q3GcdOutLabel.Name = "q3GcdOutLabel";
             this.q3GcdOutLabel.Size = new System.Drawing.Size(483, 23);
             this.q3GcdOutLabel.TabIndex = 7;
@@ -344,6 +346,7 @@
             this.q3EntryBTbox.Name = "q3EntryBTbox";
             this.q3EntryBTbox.Size = new System.Drawing.Size(112, 23);
             this.q3EntryBTbox.TabIndex = 4;
+            this.q3EntryBTbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.q3EntryBTbox_KeyDown);
             // 
             // q3EntryATbox
             // 
@@ -352,6 +355,7 @@
             this.q3EntryATbox.Name = "q3EntryATbox";
             this.q3EntryATbox.Size = new System.Drawing.Size(100, 23);
             this.q3EntryATbox.TabIndex = 3;
+            this.q3EntryATbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.q3EntryATbox_KeyDown);
             // 
             // q3EnterBLabel
             // 
@@ -403,7 +407,7 @@
             this.Q4Tab.Controls.Add(this.q4Label);
             this.Q4Tab.Location = new System.Drawing.Point(4, 25);
             this.Q4Tab.Name = "Q4Tab";
-            this.Q4Tab.Size = new System.Drawing.Size(483, 270);
+            this.Q4Tab.Size = new System.Drawing.Size(483, 249);
             this.Q4Tab.TabIndex = 3;
             this.Q4Tab.Text = "Q IV";
             this.Q4Tab.UseVisualStyleBackColor = true;
@@ -512,6 +516,7 @@
             this.q4EntryBTbox.Name = "q4EntryBTbox";
             this.q4EntryBTbox.Size = new System.Drawing.Size(112, 23);
             this.q4EntryBTbox.TabIndex = 5;
+            this.q4EntryBTbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.q4EntryBTbox_KeyDown);
             // 
             // q4EntryATbox
             // 
@@ -520,6 +525,7 @@
             this.q4EntryATbox.Name = "q4EntryATbox";
             this.q4EntryATbox.Size = new System.Drawing.Size(100, 23);
             this.q4EntryATbox.TabIndex = 4;
+            this.q4EntryATbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.q4EntryATbox_KeyDown);
             // 
             // q4EnterBLabel
             // 
@@ -566,7 +572,7 @@
             this.Q5Tab.Controls.Add(this.q5Label);
             this.Q5Tab.Location = new System.Drawing.Point(4, 25);
             this.Q5Tab.Name = "Q5Tab";
-            this.Q5Tab.Size = new System.Drawing.Size(483, 270);
+            this.Q5Tab.Size = new System.Drawing.Size(483, 249);
             this.Q5Tab.TabIndex = 4;
             this.Q5Tab.Text = "Q V";
             this.Q5Tab.UseVisualStyleBackColor = true;
@@ -615,6 +621,7 @@
             this.q5RsaModTbox.Name = "q5RsaModTbox";
             this.q5RsaModTbox.Size = new System.Drawing.Size(184, 20);
             this.q5RsaModTbox.TabIndex = 6;
+            this.q5RsaModTbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.q5RsaModTbox_KeyDown);
             // 
             // q5EncrExpTbox
             // 
@@ -622,6 +629,7 @@
             this.q5EncrExpTbox.Name = "q5EncrExpTbox";
             this.q5EncrExpTbox.Size = new System.Drawing.Size(184, 20);
             this.q5EncrExpTbox.TabIndex = 5;
+            this.q5EncrExpTbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.q5EncrExpTbox_KeyDown);
             // 
             // q5RsaModLabel
             // 
@@ -649,6 +657,7 @@
             this.q5MsgEntryTbox.Name = "q5MsgEntryTbox";
             this.q5MsgEntryTbox.Size = new System.Drawing.Size(412, 20);
             this.q5MsgEntryTbox.TabIndex = 2;
+            this.q5MsgEntryTbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.q5MsgEntryTbox_KeyDown);
             // 
             // q5MessageLabel
             // 
@@ -685,7 +694,7 @@
             this.Q6Tab.Controls.Add(this.q6Label);
             this.Q6Tab.Location = new System.Drawing.Point(4, 25);
             this.Q6Tab.Name = "Q6Tab";
-            this.Q6Tab.Size = new System.Drawing.Size(483, 270);
+            this.Q6Tab.Size = new System.Drawing.Size(483, 249);
             this.Q6Tab.TabIndex = 5;
             this.Q6Tab.Text = "Q VI";
             this.Q6Tab.UseVisualStyleBackColor = true;
@@ -734,6 +743,7 @@
             this.q6RsaModTbox.Name = "q6RsaModTbox";
             this.q6RsaModTbox.Size = new System.Drawing.Size(184, 20);
             this.q6RsaModTbox.TabIndex = 7;
+            this.q6RsaModTbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.q6RsaModTbox_KeyDown);
             // 
             // q6DecryptExpTbox
             // 
@@ -741,6 +751,7 @@
             this.q6DecryptExpTbox.Name = "q6DecryptExpTbox";
             this.q6DecryptExpTbox.Size = new System.Drawing.Size(184, 20);
             this.q6DecryptExpTbox.TabIndex = 6;
+            this.q6DecryptExpTbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.q6DecryptExpTbox_KeyDown);
             // 
             // q6RsaModLabel
             // 
@@ -768,6 +779,7 @@
             this.q6CypherTbox.Name = "q6CypherTbox";
             this.q6CypherTbox.Size = new System.Drawing.Size(412, 20);
             this.q6CypherTbox.TabIndex = 3;
+            this.q6CypherTbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.q6CypherTbox_KeyDown);
             // 
             // q6CypherLabel
             // 
@@ -791,13 +803,35 @@
             // 
             // HelpTab
             // 
+            this.HelpTab.Controls.Add(this.HelpGenerateReportBtn);
+            this.HelpTab.Controls.Add(this.helpTbox);
             this.HelpTab.Controls.Add(this.helpLabel);
             this.HelpTab.Location = new System.Drawing.Point(4, 25);
             this.HelpTab.Name = "HelpTab";
-            this.HelpTab.Size = new System.Drawing.Size(483, 270);
+            this.HelpTab.Size = new System.Drawing.Size(483, 249);
             this.HelpTab.TabIndex = 6;
             this.HelpTab.Text = "Help";
             this.HelpTab.UseVisualStyleBackColor = true;
+            // 
+            // HelpGenerateReportBtn
+            // 
+            this.HelpGenerateReportBtn.Location = new System.Drawing.Point(186, 222);
+            this.HelpGenerateReportBtn.Name = "HelpGenerateReportBtn";
+            this.HelpGenerateReportBtn.Size = new System.Drawing.Size(105, 23);
+            this.HelpGenerateReportBtn.TabIndex = 2;
+            this.HelpGenerateReportBtn.Text = "Generate Report";
+            this.HelpGenerateReportBtn.UseVisualStyleBackColor = true;
+            this.HelpGenerateReportBtn.Click += new System.EventHandler(this.HelpGenerateReportBtn_Click);
+            // 
+            // helpTbox
+            // 
+            this.helpTbox.Location = new System.Drawing.Point(8, 39);
+            this.helpTbox.Name = "helpTbox";
+            this.helpTbox.ReadOnly = true;
+            this.helpTbox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
+            this.helpTbox.Size = new System.Drawing.Size(467, 177);
+            this.helpTbox.TabIndex = 1;
+            this.helpTbox.Text = "";
             // 
             // helpLabel
             // 
@@ -813,7 +847,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(491, 299);
+            this.ClientSize = new System.Drawing.Size(491, 278);
             this.Controls.Add(this.MenuTabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -908,6 +942,8 @@
         private System.Windows.Forms.TextBox q4XOutTbox;
         private System.Windows.Forms.TextBox q4GcdOutTbox;
         private System.Windows.Forms.TextBox q4EqtnOutTbox;
+        private System.Windows.Forms.Button HelpGenerateReportBtn;
+        private System.Windows.Forms.RichTextBox helpTbox;
     }
 }
 
